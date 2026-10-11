@@ -27,7 +27,10 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v6
         with:
-          gradle-version: '9.2'
+          gradle-version: '9.2.1'
+
+      - name: Show Gradle version
+        run: gradle --version
 
       - name: Build mod
         run: gradle build --no-daemon
